@@ -20,6 +20,7 @@ Create a service that will mimic the backend of a parcel company
 ### Dependencies:  
 nodemon  
 express  
+joi  
 
 ### Postman examples for testing:  
 
