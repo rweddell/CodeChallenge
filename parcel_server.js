@@ -25,19 +25,15 @@ class Truck {
     this.name = name;
     this.load = [];
   }
-
   display_load(){
     return this.load;
   }
-
   num_parcels(){
     return this.load.length;
   }
-
   load_parcel(new_parcel){
     this.load.push(new_parcel);
   }
-
   unload_parcel(existing_parcel){
     const parcel_found = this.load.find(p => p.item() === existing_parcel);
     if (!parcel_found) return false;
@@ -45,7 +41,6 @@ class Truck {
     this.load.splice(index, 1);
     return true;
   } 
-
   total_weight(){
     let weight = 0
     for (let p of this.load){
@@ -107,11 +102,10 @@ app.put('/api/truckservice/unload/:id', (req, res) => {
     res.send(truck);
   } else {
     res.send('Unable to find parcel in given truck\'s load.');
-    res.send(truck)
   }
 });
 
-//return a given truck object
+//return a given truck object and its attributes
 app.get('/api/truckservice/truck/:id', (req,res) => {
   // console.log(req.params);
   const truck = trucklist.find(c => c.id === parseInt(req.params.id));
@@ -133,7 +127,6 @@ app.delete('/api/truckservice/remove/:id', (req, res) => {
   // console.log(req.params);
   const truck = trucklist.find(c => c.id === parseInt(req.params.id));
   if (!truck) return res.status(404).send('The given truck was not found.');
-  
   const index = trucklist.indexOf(truck);
   trucklist.splice(index, 1);
   res.send(truck);
