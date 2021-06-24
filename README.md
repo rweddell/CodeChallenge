@@ -24,7 +24,7 @@ express
 ### Postman examples for testing:  
 
 #### Creating a new empty truck  
-POST  
+Method = POST  
 URL = localhost:3000/api/truckservice/newtruck  
 JSON =   
 > {  
@@ -32,11 +32,11 @@ JSON =
 > }  
 
 #### Viewing the list of existing trucks and their attributes  
-GET  
+Method = GET  
 URL = localhost:3000/api/truckservice  
 
 #### Create a parcel and add to specific truck  
-PUT  
+Method = PUT  
 URL = localhost:3000/api/truckservice/load/1  
 JSON =   
 > {  
@@ -45,7 +45,7 @@ JSON =
 > }  
 
 #### Viewing the weight of a given truck  
-GET  
+Method = GET  
 URL = localhost:3000/api/truckservice/weight/1  
 JSON =   
 > {  
@@ -53,7 +53,7 @@ JSON =
 > }  
 
 #### Unload a given parcel from a given truck  
-PUT  
+Method = PUT  
 URL = localhost:3000/api/truckservice/unload/1  
 JSON =   
 > {  
@@ -61,5 +61,5 @@ JSON =
 > }  
 
 #### Creating a new empty truck  
-DEL  
+Method = DEL  
 URL = localhost:3000/api/truckservice/remove/1  
