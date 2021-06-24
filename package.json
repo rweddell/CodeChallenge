@@ -1,7 +1,7 @@
 {
   "name": "truck_server",
   "version": "1.0.0",
-  "description": "Create a service that will mimic the backend of a parcel company  \r - Create, load, and unload trucks with parcels  \r     - Add these features as endpoints in an API  \r - Be able to retrieve the number of parcels in a given truck  \r - Be able to retrieve the total weight of a given truck  \r - Parcels should have a specific weight and it should be given when a parcel is created",
+  "description": "Create a service that will mimic the backend of a parcel company",
   "main": "parcel_server.js",
   "dependencies": {
     "express": "^4.17.1",
