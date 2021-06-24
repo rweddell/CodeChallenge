@@ -47,10 +47,6 @@ JSON =
 #### Viewing the weight of a given truck  
 Method = GET  
 URL = localhost:3000/api/truckservice/weight/1  
-JSON =   
-> {  
->	"id": 1    
-> }  
 
 #### Unload a given parcel from a given truck  
 Method = PUT  
