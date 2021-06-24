@@ -118,8 +118,9 @@ app.get('/api/truckservice/weight/:id', (req,res) => {
   // console.log(req.params);
   const truck = trucklist.find(c => c.id === parseInt(req.params.id));
   if (!truck) return res.status(404).send('The given truck was not found.');
-  const weight_result = 'The weight of truck ' + req.params.id.toString() + ' is ' + truck.total_weight().toString();
-  res.send(weight_result);
+  const load_size = 'Truck ' + truck.id + ' has ' + truck.load.length.toString() + ' items in its shipment. '
+  const weight_result = 'The weight of truck ' + truck.id + ' is ' + truck.total_weight().toString() + '. ';
+  res.send(load_size + weight_result);
 });
 
 //remove a given truck object from the list
