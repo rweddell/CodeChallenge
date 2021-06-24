@@ -20,7 +20,6 @@ Create a service that will mimic the backend of a parcel company
 ### Dependencies:  
 nodemon  
 express  
-joi  
 
 ### Postman examples for testing:  
 
@@ -47,7 +46,7 @@ JSON =
 
 #### Viewing the weight of a given truck  
 Method = GET  
-URL = localhost:3000/api/truckservice/weight/1  
+URL = localhost:3000/api/truckservice/weight/(truck_id)  
 
 #### Unload a given parcel from a given truck  
 Method = PUT  
