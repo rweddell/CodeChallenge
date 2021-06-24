@@ -37,7 +37,7 @@ URL = localhost:3000/api/truckservice
 
 #### Create a parcel and add to specific truck  
 Method = PUT  
-URL = localhost:3000/api/truckservice/load/1  
+URL = localhost:3000/api/truckservice/load/(truck_id)    
 JSON =   
 > {  
 >	"item": "potatoes",  
@@ -50,7 +50,7 @@ URL = localhost:3000/api/truckservice/weight/1
 
 #### Unload a given parcel from a given truck  
 Method = PUT  
-URL = localhost:3000/api/truckservice/unload/1  
+URL = localhost:3000/api/truckservice/unload/(truck_id)  
 JSON =   
 > {  
 >	"item": "potatoes"  
@@ -58,4 +58,4 @@ JSON =
 
 #### Creating a new empty truck  
 Method = DEL  
-URL = localhost:3000/api/truckservice/remove/1  
+URL = localhost:3000/api/truckservice/remove/(truck_id)   
